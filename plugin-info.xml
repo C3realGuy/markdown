@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes" ?>
+<plugin id="CerealGuy:Markdown">
+	<name>Markdown</name>
+	<author>CerealGuy</author>
+	<description>Let's you write posts + messages with Markdown Syntax. Just put it inside [md][/md].</description>
+	<version>1.0</version>
+  <bbcodes>
+    <bbcode tag="md" type="parsed">
+      <before-code><![CDATA[<div class="bbc_markdown">]]></before-code>
+      <after-code><![CDATA[</div>]]></after-code>
+			<process file="src/BBC-Markdown" function="bbc_process_markdown" />
+    </bbcode>
+  </bbcodes>
+</plugin>
