@@ -8,7 +8,8 @@
     <bbcode tag="md" type="parsed">
       <before-code><![CDATA[<div class="bbc_markdown">]]></before-code>
       <after-code><![CDATA[</div>]]></after-code>
-			<process file="src/BBC-Markdown" function="bbc_process_markdown" />
+      <process file="src/BBC-Markdown" function="bbc_process_markdown" 
+/>
     </bbcode>
   </bbcodes>
 </plugin>
