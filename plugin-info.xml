@@ -4,12 +4,11 @@
 	<author>CerealGuy</author>
 	<description>Let's you write posts + messages with Markdown Syntax. Just put it inside [md][/md].</description>
 	<version>1.0</version>
-  <bbcodes>
-    <bbcode tag="md" type="parsed">
-      <before-code><![CDATA[<div class="bbc_markdown">]]></before-code>
-      <after-code><![CDATA[</div>]]></after-code>
-      <process file="src/BBC-Markdown" function="bbc_process_markdown" 
-/>
-    </bbcode>
-  </bbcodes>
+    <bbcodes>
+        <bbcode tag="md" type="unparsed_content">
+            <content>MARKDOWN COULDN'T GET PARSED, PLEASE REPORT</content>
+            <process file="src/BBC-Markdown" function="bbc_process_markdown"/>
+			<validate-func>loadPluginSource('CerealGuy:Markdown', 'src/BBC-Markdown'); bbc_validate_markdown($tag, $data, $disabled);</validate-func>
+        </bbcode>
+    </bbcodes>
 </plugin>
